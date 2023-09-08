@@ -1,0 +1,72 @@
+body {
+  background-color: rgb(210, 225, 238);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ensure the body takes the full viewport height */
+  margin: 0; /* Remove default margin */
+  font-family: sans-serif;
+  word-spacing: 2px;
+}
+
+.card-qrCode {
+  display: flex;
+  flex-direction: column; /* Stack image and text vertically on smaller screens */
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  max-width: 200px; /* Adjust this width as needed for responsiveness */
+  width: 100%; /* Take the full width of the parent container */
+  padding: 10px; /* Add some padding for spacing */
+  text-align: center; /* Center text horizontally */
+}
+
+.card-qrCode > img {
+  height: auto; /* Allow the image to scale with its parent */
+  border-radius: 16px;
+  max-width: 100%; /* Make sure the image doesn't exceed its container width */
+  margin-bottom: 15px; /* Add spacing between image and text */
+}
+
+.card-qrCode h2 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 3px;
+  color: #35404E;
+}
+
+.card-qrCode p {
+  padding-top: 12px;
+  padding: 6px;
+  padding-bottom: 12px;
+  font-size: 0.7rem;
+  opacity: 0.7;
+  margin: 0;
+  color: #A2A4AB;
+}
+
+.attribution {
+  text-align: center; /* Center the text horizontally */
+  position: absolute; /* Position the footer absolutely */
+  bottom: 0; /* Stick it to the bottom of the page */
+  width: 100%; /* Take the full width of the viewport */
+  background-color: rgba(0, 0, 0, 0.1); /* Add a background color for better visibility */
+  padding: 10px 0; /* Add some padding for spacing */
+  font-size: 11px; /* Adjust the font size */
+}
+
+/* Style the links inside the attribution */
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+  margin: 0 5px; /* Add spacing between links */
+}
+
+@media (max-width: 768px) {
+  .card-qrCode {
+    width: 100%; /* Make the card 100% width on smaller screens */
+    margin: 10px; /* Add margin for mobile devices */
+  }
+}
